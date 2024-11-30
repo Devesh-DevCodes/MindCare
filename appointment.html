@@ -6,88 +6,97 @@
     <meta name="description" content="Schedule your appointment with Dementia MindCare for expert guidance.">
     <title>Book an Appointment - Dementia MindCare</title>
     <link rel="stylesheet" href="appo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
+
+    <!-- Header Section -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="#appointment-form">Book Appointment</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Dementia MindCare</h1>
+            <p>Supporting you every step of the way</p>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#book-appointment">Book Appointment</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- Appointment Section -->
     <main>
         <section id="book-appointment">
-            <h1>Book an Appointment</h1>
-            <p>Fill out the form below, and our support team will contact you within 24 hours.</p>
+            <div class="container">
+                <h1>Book an Appointment</h1>
+                <p>Fill out the form below, and our support team will contact you within 24 hours.</p>
 
-            <div class="appointment-form-box">
-                <form action="https://formspree.io/f/mldelonw" method="POST" class="appointment-form">
-                    <!-- <input type="hidden" name="access_key" value="83136e56-b75d-46dc-a775-1c833179cd3a"> -->
-                    <input type="hidden" name="from_name" value="DementiaMindCare">
+                <div class="appointment-form-box">
+                    <form action="https://formspree.io/f/mldelonw" method="POST" class="appointment-form">
+                        <!-- Full Name -->
+                        <div class="form-group">
+                            <label for="name">Full Name:</label>
+                            <input type="text" name="name" id="name" placeholder="Enter your full name" required>
+                        </div>
 
-                    <!-- Full Name -->
-                    <div>
-                        <label for="name">Full Name:</label>
-                        <input type="text" name="name" id="name" placeholder="Enter your full name" required />
-                    </div>
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                        </div>
 
-                    <!-- Email -->
-                    <div>
-                        <label for="email">Email Address:</label>
-                        <input type="email" name="email" id="email" placeholder="Enter your email" required />
-                    </div>
+                        <!-- Phone -->
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" name="phone" id="phone" placeholder="9876543210" required>
+                        </div>
 
-                    <!-- Phone -->
-                    <div>
-                        <label for="phone">Phone Number:</label>
-                        <input type="tel" name="phone" id="phone" placeholder="9876543210" required />
-                    </div>
+                        <!-- Preferred Date -->
+                        <div class="form-group">
+                            <label for="date">Preferred Appointment Date:</label>
+                            <input type="date" name="date" id="date" required>
+                        </div>
 
-                    <!-- Preferred Date -->
-                    <div>
-                        <label for="date">Preferred Appointment Date:</label>
-                        <input type="date" name="date" id="date" required />
-                    </div>
+                        <!-- Preferred Time -->
+                        <div class="form-group">
+                            <label for="time">Preferred Time:</label>
+                            <input type="time" name="time" id="time" required>
+                        </div>
 
-                    <!-- Preferred Time -->
-                    <div>
-                        <label for="time">Preferred Time:</label>
-                        <input type="time" name="time" id="time" required />
-                    </div>
+                        <!-- Subject -->
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <input type="text" name="subject" id="subject" placeholder="Brief appointment topic">
+                        </div>
 
-                    <!-- Subject -->
-                    <div>
-                        <label for="subject">Subject:</label>
-                        <input type="text" name="subject" id="subject" placeholder="Brief appointment topic" />
-                    </div>
+                        <!-- Message -->
+                        <div class="form-group">
+                            <label for="message">Message/Reason:</label>
+                            <textarea name="message" id="message" rows="5" placeholder="Describe your reason for the appointment" required></textarea>
+                        </div>
 
-                    <!-- Message -->
-                    <div class="message-container">
-                        <label for="message">Message/Reason:</label>
-                        <textarea name="message" id="message" rows="5" placeholder="Describe your reason for the appointment" required></textarea>
-                    </div>
-
-                    <!-- Hidden Redirect URL -->
-                    <!-- <input type="hidden" name="redirect" value="https://mindcare-inno.vercel.app"> -->
-
-                    <!-- Submit Button -->
-                    <button type="submit" class="btn-appointment-submit">Book Appointment</button>
-                </form>
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn-submit btn-appointment-submit">Book Appointment</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
+    <canvas class="canvas-effect"></canvas>
+
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Dementia MindCare | All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 Dementia MindCare | All rights reserved.</p>
+        </div>
     </footer>
 
     <!-- Web3Forms Script -->
     <script src="https://web3forms.com/client/script.js" async defer></script>
+
+<script src="script.js"></script>
 </body>
 </html>
